@@ -1,0 +1,10 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "username": "admin",
+    "password": "123456",
+    "database": "rentx",
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
+}
