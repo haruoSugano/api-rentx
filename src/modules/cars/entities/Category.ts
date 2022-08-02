@@ -1,13 +1,22 @@
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
-class Category{
+@Entity("categories")
+class Category {
+    @PrimaryColumn()
     id?: string;
+
+    @Column()
     name: string;
+
+    @Column()
     description: string;
+
+    @CreateDateColumn()
     created_at: Date;
-    // Atribuindo a está classe a responsabilidade de acrescentar o id ao objeto
+
     constructor() {
-        if(!this.id){ // this.id para referenciar o id
+        if (!this.id) { // this.id para referenciar o id
             this.id = uuidV4();
         }
     }
