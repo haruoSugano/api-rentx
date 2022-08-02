@@ -1,17 +1,28 @@
 import { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository";
-import { Category } from "../model/Category";
+import { Category } from "../entities/Category";
+import { Repository } from "typeorm";
 
-class PostgressCategoriesRepository implements ICategoriesRepository{
-    findByName(name: string): Category {
-        console.log(name);
-        throw new Error("Method not implemented.");
+class PostgresCategoriesRepository implements ICategoriesRepository {
+    private repository: Repository<Category>;
+
+    async findByName(name: string): Promise<Category> {
+        const category = await this.repository.findOne({ name });
+        return category;
     }
-    list(): Category[] {
-        return null;
+
+    async list(): Promise<Category[]> {
+        const categories = await this.repository.find();
+        return categories;
     }
-    create({ name, description }: ICreateCategoryDTO): void {
-        console.log(name, description);
+
+    async create({ name, description }: ICreateCategoryDTO): Promise<void> {
+        const category = this.repository.create({
+            description,
+            name
+        });
+
+        await this.repository.save(category);
     }
 }
 
-export { PostgressCategoriesRepository };
+export { PostgresCategoriesRepository };
