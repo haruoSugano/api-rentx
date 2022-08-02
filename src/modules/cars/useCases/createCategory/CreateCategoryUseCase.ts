@@ -1,3 +1,4 @@
+import { inject, injectable } from "tsyringe";
 import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
 
 interface IRequest {
@@ -5,27 +6,21 @@ interface IRequest {
     description: string;
 }
 
-// SOLID sendo aplicado
-// DIP -> Dependency Inversion Principle(Principio de inversão de Dependência)
-/**
- * Definir o tipo de retorno
- * Alterar o retorno de erro
- * Acessar o repositorio
- * Retornar algo
- */
+@injectable()
 class CreateCategoryUseCase {
-    //private categoriesRepository: CategoriesRepository; em vez disso
+    constructor(
+        @inject("CategoriesRepository")
+        private categoriesRepository: CategoriesRepository){}
 
-    constructor( private categoriesRepository: CategoriesRepository){}
-    execute({ description, name }: IRequest):void {
+    async execute({ name, description }: IRequest):Promise<void> {
 
-        const categoryAlreadyExists = this.categoriesRepository.findByName(name);
+        const categoryAlreadyExists = await this.categoriesRepository.findByName(name);
 
         if (categoryAlreadyExists) {
             throw new Error("Category Already exists! ");
         }
 
-        this.categoriesRepository.create({ name, description });
+        await this.categoriesRepository.create({ name, description });
     }
 }
 
