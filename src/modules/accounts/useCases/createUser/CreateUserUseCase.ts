@@ -26,7 +26,7 @@ class CreateUserUseCase {
             name,
             email,
             password: passwordHash,
-            driver_license
+            driver_license,
         });
     }
 }
