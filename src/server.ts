@@ -8,7 +8,7 @@ import "./shared/container";
 import swaggerUi from 'swagger-ui-express';
 import swaggerFile from './swagger.json';
 import { router } from './routes';
-import { AppError } from './errors/AppError';
+import { AppError } from '@errors/AppError';
 
 const app = express();
 
