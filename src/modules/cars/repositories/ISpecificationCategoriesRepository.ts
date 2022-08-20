@@ -1,5 +1,6 @@
 import { Specification } from "../infra/typeorm/entities/Specification";
 
+
 interface ISpecificationDTO {
     name: string;
     description: string;

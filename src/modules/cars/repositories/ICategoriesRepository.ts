@@ -1,5 +1,6 @@
 import { Category } from "../infra/typeorm/entities/Category";
 
+
 interface ICreateCategoryDTO {
     name: string;
     description: string;
