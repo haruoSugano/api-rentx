@@ -1,4 +1,4 @@
-#Rentax
+# Rentax
 > Projeto - Ignite Rentax
 ***
 
@@ -27,7 +27,7 @@
 
 ***
 
-# Cadastro de Especificação no carro
+# Cadastro de Especificação do carro
 **Requisitos funcionais - RF**
 - Deve ser possível cadastrar uma especificação para um carro;
 - Deve ser possível listar todas as especificações;
