@@ -1,5 +1,5 @@
 import { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository";
-import { Category } from "../entities/Category";
+import { Category } from "../infra/typeorm/entities/Category";
 import { Repository } from "typeorm";
 
 class PostgresCategoriesRepository implements ICategoriesRepository {
