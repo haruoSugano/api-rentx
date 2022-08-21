@@ -1,8 +1,9 @@
 # Rentax
 > Projeto - Ignite Rentax
 ***
+# Requisitos
 
-# Cadastro de carro
+## Cadastro de carro
 **Requisitos funcionais - RF**
 - Deve ser possível cadastrar um novo carro;
 - Deve ser possível listar todas as categorias.
@@ -15,7 +16,7 @@
 
 ***
 
-# Listagem de carros
+## Listagem de carros
 **Requisitos funcionais - RF**
 - Deve ser possível listar todos os carros disponíveis;
 - Deve ser possível listar todos os carros disponíveis pelo nome da categoria;
@@ -27,7 +28,7 @@
 
 ***
 
-# Cadastro de Especificação do carro
+## Cadastro de Especificação do carro
 **Requisitos funcionais - RF**
 - Deve ser possível cadastrar uma especificação para um carro;
 - Deve ser possível listar todas as especificações;
@@ -40,7 +41,7 @@
 
 ***
 
-# Cadastro de imagens do carro
+## Cadastro de imagens do carro
 **Requisitos funcionais - RF**
 - Deve ser possível cadastrar a imagem do carro.
 
@@ -53,7 +54,7 @@
 
 ***
 
-# Aluguel
+## Aluguel
 **Requisitos funcionais - RF**
 - Deve ser possível cadastrar um aluguel.
 
