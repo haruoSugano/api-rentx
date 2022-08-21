@@ -8,11 +8,11 @@
         "./src/shared/infra/typeorm/migrations/*.ts"
     ],
     "entities": [
-        "./src/modules/cars/entities/**/*{.ts,.js}",
-        "./src/modules/accounts/entities/**/*{.ts,.js}"
+        "./src/modules/cars/infra/typeorm/entities/**/*{.ts,.js}",
+        "./src/modules/accounts/infra/typeorm/entities/**/*{.ts,.js}"
     ],
     "cli": {
         "migrationsDir": "./src/shared/infra/typeorm/migrations",
-        "entitiesDir": ".src/modules/cars/entities"
+        "entitiesDir": ".src/modules/cars/infra/typeorm/entities"
     }
 }
