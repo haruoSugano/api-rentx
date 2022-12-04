@@ -10,7 +10,7 @@ services:
             environment:
                 - POSTGRES_USER=admin
                 - POSTGRES_PASSWORD=123456
-                - POSTGRES_DB=rentx
+                - POSTGRES_DB=database_ignite
             volumes:
                 - pgdata:/data/postgres
     app:

@@ -3,7 +3,7 @@
     "host": "localhost",
     "username": "admin",
     "password": "123456",
-    "database": "rentx",
+    "database": "database_ignite",
     "migrations": [
         "./src/shared/infra/typeorm/migrations/*.ts"
     ],
