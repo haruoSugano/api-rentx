@@ -9,7 +9,8 @@
     ],
     "entities": [
         "./src/modules/cars/infra/typeorm/entities/**/*{.ts,.js}",
-        "./src/modules/accounts/infra/typeorm/entities/**/*{.ts,.js}"
+        "./src/modules/accounts/infra/typeorm/entities/**/*{.ts,.js}",
+        "./src/modules/rentals/infra/typeorm/entities/**/*{.ts,.js}"
     ],
     "cli": {
         "migrationsDir": "./src/shared/infra/typeorm/migrations",
