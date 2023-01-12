@@ -5,7 +5,11 @@
   "author": "Haruo Sugano <haruosugano@icloud.com>",
   "license": "MIT",
   "scripts": {
+<<<<<<< HEAD
     "dev": "NODE_ENV=dev ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
+=======
+    "dev": "NODE_ENV=dev ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts ",
+>>>>>>> 9485083a521cece85fe09e2a3ee27811870bc1c9
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "test": "NODE_ENV=test jest",
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
