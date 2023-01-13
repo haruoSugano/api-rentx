@@ -30,8 +30,6 @@ class RentalsRepository implements IRentalsRepository {
         return rental;
     }
 
-<<<<<<< HEAD
-=======
     async findByUserId(user_id: string): Promise<Rental[]> {
         const rentals = await this.repository.find({
             where: { user_id },
@@ -41,7 +39,6 @@ class RentalsRepository implements IRentalsRepository {
         return rentals;
     }
 
->>>>>>> 9485083a521cece85fe09e2a3ee27811870bc1c9
     async create({ user_id, car_id, expected_return_date, total, id, end_date }: ICreateRentalDTO): Promise<Rental> {
         const rental = this.repository.create({
             user_id, 
