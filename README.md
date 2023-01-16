@@ -81,3 +81,15 @@
 * Caso haja multa, deverá ser somado ao total do aluguel.
 
 ***
+
+## Recuperar senha
+**Requisitos funcionais - RF**
+- Deve ser possível possível o usuário recupera a senha informando o email;
+- O usuário deve receber um e-mail com o passo a passo para a recuperação da senha;
+- O usuário deve conseguir inserir uma nova senha.
+
+**Regra de negócios - RN**
+- O usuário precisa informar uma nova senha;
+- O link enviado para a recuperação deve expirar em 3 horas;
+
+***
