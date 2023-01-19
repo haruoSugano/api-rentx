@@ -6,7 +6,7 @@ import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepositor
 import { IUsersTokensRepository } from "@modules/accounts/repositories/IUsersTokensRepository";
 import { AppError } from "@shared/errors/AppError";
 import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
-import { EtherealMailProvider } from "@shared/container/providers/MailProvider/implementations/EtherealMailProvider";
+import { IMailProvider } from "@shared/container/providers/MailProvider/IMailProvider";
 
 @injectable()
 class SendForgotPasswordMailUseCase {
@@ -18,7 +18,7 @@ class SendForgotPasswordMailUseCase {
         @inject("DayjsDateProvider")
         private dateProvider: IDateProvider,
         @inject("EtherealMailProvider")
-        private mailProvider: EtherealMailProvider
+        private mailProvider: IMailProvider
     ) { }
     async execute(email: string) {
         const user = await this.usersRepository.findByEmail(email);
